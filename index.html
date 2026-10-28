@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Ornithraem</title>
+        <link rel="preload" as="image" href="/assets/bg1.png" fetchpriority="high">
+        <link rel="stylesheet" href="/static/stylesheet.css">
+        <!-- <link rel="stylesheet" href="/assets/fonts/fonts.css"> -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <style>
+            #hero-the-blog::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/blog-cover-2.png');
+            }
+            #hero-books::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/artwork.png');
+            }
+            #hero-artwork::before {
+                /* background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/blog-cover-2.png'); */
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/artwork-page-3.png');
+            }
+            #hero-mini-stories::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/ministories.jpg');
+            }
+            #hero-a-vessel::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/ministories/a-vessel-2.png');
+            }
+            #hero-as-he-was-and-always-will::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/ministories/as-he-was-and-always-will.png');
+            }
+            #hero-you-smell-like-gunpowder::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/ministories/you-smell-like-gunpowder-2.jpg');
+            }
+            #hero-do-you-like-breathing::before {
+                background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/ministories/do-you-like-breathing-2.jpg');
+            }
+            #hero-about::before {
+                /* background-image: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url('/assets/blog-cover-2.png'); */
+            }
+        </style>
+
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="/assets/fonts/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    </head>
+    <body>
+        <header class="style1">
+            <nav>
+                <img src="assets/icon 64.jpg" class="icon">
+                <span class="header-title">The Ornithraem</span>
+                <span class="phone" hidden>The Ornithraem</span>
+                
+                <a href="#home" class="nav-element">Home</a>
+                <a href="#the-blog" class="nav-element">The Blog</a>
+                    <a href="#the-blog/ministories" class="nav-element additional"><i class="fa-solid fa-angle-right"></i> Mini Stories</a>
+                <a href="#books" class="nav-element">Books</a>
+                <a href="#artwork" class="nav-element">Artwork</a>
+                <a href="#about" class="nav-element">About</a>
+                <a class="search"><i class="fa-brands fa-sistrix"></i></a>
+
+                <!-- MOBILE TOGGLE -->
+                <button id="hamburger-toggle" aria-label="Open Navigation Menu" class="hamburger-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- NORMAL DOM VIEWPORT -->
+        <main class="spa-viewport">
+            
+            <!-- HOME PAGE -->
+            <div class="spa-page" id="home" hidden>
+                <div class="hero-image full-hero" id="hero-home">
+                    <div class="hero-text" data-text="The Ornithraem">The Ornithraem</div>
+                    <div class="guide" onclick="scrollPastHero('hero-home', 45)"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <section class="style2">
+                    <h1>Ornithos' Blog.</h1>
+                    <h3>Hi! Welcome to the Ornithraem, take a look around...<br><br>My name's Ornithos, I write horror stories. This blog will be mainly focused on 'mini stories'. However I also write books which are not published...YET! That's about it. Enjoy your stay! <a href="#about">Read more...</a></h3>
+                </section>
+                <section class="style4">
+                    <h1>Explore...</h1>
+                    <hr>
+                </section>
+                <section class="style2 cards">
+                    <article class="card">
+                        <a href="#the-blog"><img src="assets/blog 512.png" alt="Blog link cover"></a>
+                        <a class="card-link" href="#the-blog"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ornithos' Blog</a>
+                        <p>Subscribe to the blog for stories. These stories are often psychological and existential.</p>
+                    </article>
+                    <article class="card">
+                        <a href="#artwork"><img src="assets/artwork 512.png" alt="Artwork link cover"></a>
+                        <a class="card-link" href="#artwork"><i class="fa-solid fa-arrow-up-right-from-square"></i> Artwork</a>
+                        <p>Check out my artwork.</p>
+                    </article>
+                    <article class="card">
+                        <a href="#books"><img src="assets/books 512.png" alt="Books link cover"></a>
+                        <a class="card-link" href="#books"><i class="fa-solid fa-arrow-up-right-from-square"></i> Books</a>
+                        <p>Buy or preview my writings and published books.</p>
+                    </article>
+                </section>
+                <section class="style4 spacer"></section>
+            </div>
+
+            <!-- THE BLOG PAGE -->
+            <div class="spa-page" id="the-blog" hidden>
+                <div class="hero-image partial" id="hero-the-blog">
+                    <div class="hero-text" data-text="The Blog">The Blog</div>
+                </div>
+                <section class="style2">
+                    <h1>Ornithos' Blog.</h1>
+                    <h3>You can navigate to the pages for my original writings and pieces from here.</h3>
+                </section>
+                <section class="style4 spacer">
+                    <hr>
+                </section>
+                <section class="style2 array">
+                    <article class="column">
+                        <h1><a href="#the-blog/ministories">Mini Stories</a></h1>
+                        <h3>A multitude of writings with different genres and styles.</h3>
+                    </article>
+                    <article class="column">
+                        <small>Recent Works:</small>
+                        <article>
+                            <h2><a href="#the-blog/ministories/welcome-home-mister-jones">Welcome Home Mister Jones.</a></h2>
+                            <small>October 29th, 2026</small>
+                            <p><i>He was seated on an old decrepit couch. One whose stains had soaked into its very fabric. The room itself was...</i></p>
+                        </article>
+                        <article>
+                            <h2><a href="#the-blog/ministories/but-my-soul-was-at-peace">But my soul was at peace.</a></h2>
+                            <small>October 26th, 2026</small>
+                            <p><i>The day i was born, the world, or so I was told, was engulfed in black clouds, light flashing and thunder...</i></p>
+                        </article>
+                        <article>
+                            <h2><a href="#the-blog/ministories/a-vessel">A Vessel</a></h2>
+                            <small>May 9th, 2026</small>
+                            <p><i>His eyes creaked open, but the darkness didn't lift. It wrapped around him like a second skin-suffocating, absolute...</i></p>
+                        </article>
+                        <hr>
+                        <a class="card-link" href="#the-blog/ministories"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read more...</a>
+                    </article>
+                </section>
+                <!-- <section class="style2 spacer-2">
+                    <hr>
+                </section>
+                <section class="style2 array">
+                    <article class="column">
+                        <h1><a>The Extras</a></h1>
+                        <h3>Miscellaneous and diversified compositions.</h3>
+                    </article>
+                    <article class="column">
+                        <small>Recent Works:</small>
+                        <article>
+                            <h2><a>Free Speech [Article]</a></h2>
+                            <small>[Pending]</small>
+                            <p><i>This article is pending, check back later!</i></p>
+                        </article>
+                    </article>
+                </section> -->
+                <section class="style4 spacer"></section>
+            </div>
+
+            <!-- BOOKS PAGE -->
+            <div class="spa-page" id="books" hidden>
+                <div class="hero-image partial" id="hero-books">
+                    <div class="hero-text" data-text="Books">Books</div>
+                </div>
+                <section class="style2">
+                    <h1>Published & Upcoming Books</h1>
+                    <h3>You can find the links to my literary works here.</h3>
+                </section>
+                <section class="style4 spacer">
+                    <hr>
+                </section>
+                <section class="style2 array-2">
+                    <article class="column">
+                        <img src="/assets/tcon-cover-small.png" alt="Cover image for The Children Of Nehras by Ornithos">
+                    </article>
+                    <article class="column">
+                        <h1><a href="https://ornithraem.gumroad.com/l/tcon">The Children of Nehras</a></h1>
+                        <small>7th August, 2025</small>
+                        <p>Fifty children are thrust into a grotesque imitation of nature, a sealed room where nothing organic survives. The walls are wrapped in warped wallpaper mimicking an open field, the ground is covered in abrasive plastic turf that cuts into their ankles, and a vast screen above plays an endless loop of a prerecorded sky. Stripped of answers, identity, and escape, they're left only with each other and the disembodied voice always watching, from the walls.</p>
+                        <a class="card-link" href="https://ornithraem.gumroad.com/l/tcon"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read on...</a>
+
+                    </article>
+                </section>
+                <section class="style4 spacer"></section>
+                <section class="style2 array-2">
+                    <article class="column invisible">
+                        <img src="/assets/tcon-cover-transparent.png" alt="nothing here...">
+                    </article>
+                    <article class="column" style="width: 100%;">
+                        <h1>...</h1>
+                        <small></small>
+                        <p>Stay tuned for more...</p>
+
+                    </article>
+                </section>
+                <section class="style4 spacer"></section>
+            </div>
+
+            <!-- ARTWORK PAGE -->
+            <div class="spa-page" id="artwork" hidden>
+                <div class="hero-image partial" id="hero-artwork">
+                    <div class="hero-text" data-text="Artwork">Artwork</div>
+                </div>
+                <section class="style2">
+                    <h1>A gallery for my artwork.</h1>
+                    <h3>Hi! Heres a gallery for my artwork. I usually work in digital but also have some pencil sketches that I've posted on my <a href="https://www.instagram.com/deltay1art/" target="_blank" rel="noopener noreferrer">Instagram</a>, if you're interested then drop on by there.</h3>
+                </section>
+                <!-- POPULATED GRID CONTAINER -->
+                <section class="style2 gallery-section">
+                    <div class="artwork-grid" id="dynamic-artwork-grid"></div>
+                </section>
+                <section class="style4 spacer"></section>
+            </div>
+
+            <!-- ABOUT PAGE -->
+            <div class="spa-page" id="about" hidden>
+                <div class="hero-image partial" id="hero-about">
+                    <div class="hero-text" data-text="About">About</div>
+                </div>
+                <section class="style2">
+                    <h1>Who is Ornithos?</h1>
+                </section>
+                <section class="style4 spacer">
+                    <hr>
+                </section>
+                <section class="style2 array">
+                    <article class="column">
+                        <img src="/assets/bg2.png" alt="Ornithos...?">
+                    </article>
+                    <article class="column">
+                        <h1><b>Ornithos</b></h1>
+                        <small>Who am I?</small>
+                        <p>A psychological fiction writer trying to make a name in the literary world. My novels are usually short, and have themes of trauma, existential crisis, and over all disturbance. </p>
+                    </article>
+                </section>
+                <section class="style4">
+                    <p>Besides my books, I also come up with ideas that can't be published into a fully fleshed story with character arcs, etc. That's why I've created a blog for these "mini" stories that you can enjoy while I'm busy on a different project. Other than my literary work, I am also an artist and you can find some of my work on Instagram.<br><br>
+                    
+                    Thanks for reading!</p>
+                </section>
+                <section class="style4 spacer"></section>
+            </div>
+
+            <!-- 404 -->
+            <div class="spa-page" id="page-404" hidden>
+                <div class="hero-image full-hero" id="hero-404">
+                    <div class="hero-text" data-text="404">404</div>
+                    <div class="guide" onclick="scrollPastHero('hero-404', 45)"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <section class="style2" style="text-align: center;">
+                    <h1>Page Not Found</h1>
+                    <h3>The page you are looking for does not exist or has been moved, are you sure the URL is correct?</h3>
+                    <hr><br>
+                    <h2><a href="#home">Lets go home...</a></h2>
+                </section>
+                <section class="style4 spacer"></section>
+            </div>
+            
+            <!-- SUBPAGE CONTAINER -->
+            <div class="spa-page" id="subpage-container" hidden>
+                <!-- hello lol -->
+            </div>
+
+        </main>
+
+        <footer>
+            COPYRIGHT &copy;2025, ORNITHOS. ALL RIGHTS RESERVED<br>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/deltay1art/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram_white_28dp.png" style="--element-bg: #FE005C;"></a>
+            </div>
+        </footer>
+    </body>
+    <script src="static/script.js"></script>
+    <script src="static/artwork.js" defer></script>
+</html>
