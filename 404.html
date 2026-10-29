@@ -2,17 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>The Ornithraem - Redirecting...</title>
+    <title>The Ornithraem - Not Found</title>
     <script type="text/javascript">
-        var pathSegmentsToKeep = 0;
         var l = window.location;
-        var repoPrefix = l.pathname.split('/')[1];
-        var targetRoute = l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/');
-        
-        l.replace(
-            l.protocol + '//' + l.host + '/' + (repoPrefix ? repoPrefix + '/' : '') +
-            'index.html#' + targetRoute + l.search
-        );
+        var pathname = l.pathname;
+
+        var hasFileExtension = /\.[0-9a-z]+$/i.test(pathname);
+
+        if (!hasFileExtension) {
+            var pathSegmentsToKeep = 0;
+            var repoPrefix = pathname.split('/')[1];
+            var targetRoute = pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/');
+            
+            l.replace(
+                l.protocol + '//' + l.host + '/' + (repoPrefix ? repoPrefix + '/' : '') +
+                'index.html#' + targetRoute + l.search
+            );
+        } else {
+            document.write('<!DOCTYPE html><html><head><title>404 Not Found</title><style>body{background:#111;color:#f9f9f9;font-family:sans-serif;text-align:center;padding:50px;}h1{color:#8e61b6;}</style></head><body><h1>404 - Asset Not Found</h1><p>The requested file or asset could not be located.</p><br><a href="./#home" style="color:#8e61b6;text-decoration:underline;">Return Home</a></body></html>');
+        }
     </script>
 </head>
 <body>
