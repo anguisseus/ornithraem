@@ -1,0 +1,14 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: pages
+    label: Pages
+    type: group
+    items:
+      - name: ministories
+        label: Mini Stories
+        type: collection
+        path: pages/the-blog/ministories
+        format: raw
