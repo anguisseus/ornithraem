@@ -18,6 +18,12 @@
         url('../assets/ministories/artwork.png');
 }
 
+#hero-do-you-like-breathing::before {
+    background-image:
+        linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
+        url('../assets/ministories/do-you-like-breathing-2.jpg');
+}
+
 #hero-i-am-not-crying::before {
     background-image:
         linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
