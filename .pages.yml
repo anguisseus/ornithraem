@@ -37,5 +37,6 @@ content:
             label: Hero Image Filename
             type: string
             required: false
+            
             description: Filename inside /assets/ministories/, set to artwork.png for default
 
