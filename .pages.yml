@@ -10,5 +10,5 @@ content:
       - name: ministories
         label: Mini Stories
         type: collection
-        path: /pages/the-blog/ministories
+        path: pages/the-blog/ministories
         format: raw
