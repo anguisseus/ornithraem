@@ -3,7 +3,13 @@
 #hero-a-vessel::before {
     background-image:
         linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
-        url('../assets/ministories/artwork.png');
+        url('../assets/ministories/a-vessel-2.png');
+}
+
+#hero-as-he-was-and-always-will::before {
+    background-image:
+        linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
+        url('../assets/ministories/as-he-was-and-always-will.png');
 }
 
 #hero-but-my-soul-was-at-peace::before {
