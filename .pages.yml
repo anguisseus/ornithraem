@@ -33,4 +33,9 @@ content:
           - name: author
             label: Author
             type: string
+          - name: hero_image
+            label: Hero Image Filename
+            type: string
+            required: false
+            description: Filename inside /assets/ministories/
 
