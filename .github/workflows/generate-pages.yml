@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "pages/the-blog/ministories/*.json"
+      - "!pages/the-blog/ministories/ministories.json"
       - "scripts/generate-pages.mjs"
   workflow_dispatch:
 
@@ -28,7 +29,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate HTML partials and story index
+      - name: Generate story pages, index, and hero CSS
         run: node scripts/generate-pages.mjs
 
       - name: Commit generated files
@@ -38,10 +39,11 @@ jobs:
 
           git add pages/the-blog/ministories/*.html
           git add pages/the-blog/ministories/ministories.json
+          git add static/ministories-heroes.css
 
           if git diff --cached --quiet; then
-            echo "No generated files have changed."
+            echo "No generated files changed."
           else
-            git commit -m "Generate story pages and index from CMS content"
+            git commit -m "Generate story pages and assets from CMS content"
             git push
           fi
