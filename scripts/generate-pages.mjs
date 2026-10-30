@@ -76,7 +76,11 @@ async function main() {
   });
 
   const jsonFiles = entries
-    .filter(entry => entry.isFile() && entry.name.endsWith(".json"))
+    .filter(entry =>
+        entry.isFile() &&
+        entry.name.endsWith(".json") &&
+        entry.name !== "ministories.json"
+    )
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const storyIndex = [];
@@ -114,7 +118,7 @@ async function main() {
   );
 
   // generates index used by ministories.js
-  const indexPath = path.join(STORIES_DIR, "stories.json");
+  const indexPath = path.join(STORIES_DIR, "ministories.json");
 
   await fs.writeFile(
     indexPath,
