@@ -16,7 +16,7 @@ async function renderMiniStories() {
     container.dataset.loaded = 'true';
 
     const basePath = getStoriesBasePath();
-    const indexUrl = `${basePath}pages/the-blog/ministories/stories.json`;
+    const indexUrl = `${basePath}pages/the-blog/ministories/ministories.json`;
 
     try {
         const response = await fetch(indexUrl);
