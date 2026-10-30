@@ -40,3 +40,25 @@ content:
             
             description: Filename inside /assets/ministories/, set to artwork.png for default
 
+      - name: artwork
+        label: Artwork
+        type: file
+        path: assets/data/artwork.json
+        format: json
+        list: true
+        view:
+          fields: [filename, category, date]
+        fields:
+          - name: filename
+            label: Artwork Image
+            type: image
+            required: true
+            options:
+              path: artwork
+              extensions: [png, jpg, jpeg, webp]
+          - name: category
+            label: Category
+            type: string
+          - name: date
+            label: Date
+            type: string
