@@ -118,6 +118,7 @@ function getArtworkImagePath(filename, basePath) {
     return `${basePath}${relativePath}`;
 }
 
+
 async function renderArtworkGallery() {
     const grid = document.getElementById('dynamic-artwork-grid');
     if (!grid || grid.dataset.loaded === 'true') return; // prevent duplicate
@@ -143,7 +144,8 @@ async function renderArtworkGallery() {
 
             grid.replaceChildren();
 
-            artworkDatabase.forEach(art => {
+            // newest first without modifying og JSON array
+            artworkDatabase.slice().reverse().forEach(art => {
                 if (!art.filename) return;
 
                 const fullAssetPath = getArtworkImagePath(art.filename, basePath);
