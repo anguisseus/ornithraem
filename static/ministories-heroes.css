@@ -1,5 +1,11 @@
 /* Automatically generated. Do not edit manually. */
 
+#hero-a-vessel::before {
+    background-image:
+        linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
+        url('../assets/ministories/artwork.png');
+}
+
 #hero-but-my-soul-was-at-peace::before {
     background-image:
         linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
@@ -13,6 +19,12 @@
 }
 
 #hero-welcome-home-mister-jones::before {
+    background-image:
+        linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
+        url('../assets/ministories/artwork.png');
+}
+
+#hero-you-smell-like-gunpowder::before {
     background-image:
         linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)),
         url('../assets/ministories/artwork.png');
