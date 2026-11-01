@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /.github/
+Disallow: /scripts/
+Disallow: /.pages.yml
+Disallow: /README.md
+Disallow: /readme.md
+
+Sitemap: https://anguisseus.github.io/ornithraem/sitemap.xml
