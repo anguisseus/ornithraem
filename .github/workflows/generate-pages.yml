@@ -38,35 +38,37 @@ jobs:
           const path = require("path");
 
           const DOMAIN = "https://anguisseus.github.io/ornithraem";
-          const routes = ["#home", "#the-blog", "#books", "#artwork", "#about"];
+          // Base static routes
+          const routes = ["#home", "#the-blog", "#books", "#artwork", "#about", "#the-blog/ministories"];
           
-          function scanDir(dir, baseRoute = "#the-blog") {
+          function scanDir(dir) {
               if (!fs.existsSync(dir)) return;
               const entries = fs.readdirSync(dir, { withFileTypes: true });
               for (const entry of entries) {
                   const fullPath = path.join(dir, entry.name);
                   if (entry.isDirectory()) {
-                      scanDir(fullPath, `${baseRoute}/${entry.name}`);
+                      scanDir(fullPath);
                   } else if (entry.isFile() && entry.name.endsWith(".html")) {
                       const nameWithoutExt = entry.name.replace(".html", "");
-                      routes.push(`${baseRoute}/${nameWithoutExt}`);
+                      routes.push(`#the-blog/ministories/${nameWithoutExt}`);
                   }
               }
           }
 
-          scanDir("pages");
+          scanDir("pages/the-blog/ministories");
 
-          let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+          let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+          xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
           const today = new Date().toISOString().split("T")[0];
 
           for (const route of routes) {
               const cleanUrl = route.replace("#", "");
-              xml += `    <url>\n        <loc>${DOMAIN}/#${cleanUrl}</loc>\n        <lastmod>${today}</lastmod>\n    </url>\n`;
+              xml += `  <url>\n    <loc>${DOMAIN}/#${cleanUrl}</loc>\n    <lastmod>${today}</lastmod>\n  </url>\n`;
           }
           xml += `</urlset>`;
 
           fs.writeFileSync("sitemap.xml", xml, "utf-8");
-          console.log("Sitemap generated successfully.");
+          console.log("Clean sitemap generated successfully.");
           '
 
       - name: Commit generated files and sitemap
